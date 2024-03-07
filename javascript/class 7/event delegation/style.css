@@ -1,0 +1,9 @@
+#mynewtable{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around
+}
+h3{
+    text-align: center;
+}    

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+        background-color: violet;
+        margin: 10px;
+        text-align: center;
+        border: 5px solid black;
+        display: inline; 
+        /* inline removes the height and width of the element, it just takes the size whatever the size of content */
+        display: inline-block;
+        /* inline-block renders element as inline but with block (means in a line as it is) */
+    }
+    #div2{
+        display: none;
+        /* none - deletes the element from DOM  */
+    }
+</style>
+<body>
+    <div id="div1" class="box">box 1</div>
+    <div id="div2" class="box">box 2 </div>
+    <div id="div3" class="box">box 3</div>
+</body>
+</html>

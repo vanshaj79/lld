@@ -1,0 +1,12 @@
+1. Sync vs Async processing
+2. Callbacks
+3. Async function using in-built module
+4. Event loop & parallel async operations
+
+Synchronous means line by line.(blocking)
+Asynchronous means not line by line.(non-blocking)
+
+Examples of blocking tasks:-
+1. Network call 
+2. I/O for files
+3. DB operations

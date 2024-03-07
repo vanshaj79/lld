@@ -1,0 +1,56 @@
+<!-- Event propagation - how a event propagate/traverse inside your DOM is basically known as event propagation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        min-height: 200px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">
+
+            </div>
+        </div>
+    </div>
+</body>  
+<script>
+    let grandparent = document.querySelector('.grandparent')
+    let parent = document.querySelector('.parent')
+    let child = document.querySelector('.child')
+    
+    //capturing phase 
+    grandparent.addEventListener('click',event => {
+       // console.log('capturing is going on')
+        console.log('grandparent is clicked', event.eventPhase)
+    },true)
+    //the third parameter is bydefault 'false' due to which we can have only bubbling phase 
+    //if we want to have capturing phase then we explicitly give the third parameter as 'true'
+    parent.addEventListener('click',event => {
+        console.log('parent is clicked', event.eventPhase)
+    },true)
+    child.addEventListener('click',event => {
+        console.log('child is clicked', event.eventPhase)
+    },true)
+
+    //bubbling phase
+    grandparent.addEventListener('click',event => {
+        console.log('grandparent is clicked', event.eventPhase)
+    })
+    parent.addEventListener('click',event => {
+        console.log('parent is clicked', event.eventPhase)
+    })
+    child.addEventListener('click',event => {
+        //console.log('bubbling is going on')
+        console.log('child is clicked', event.eventPhase)
+    })
+</script>
+</html> 

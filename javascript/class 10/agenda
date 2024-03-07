@@ -1,0 +1,6 @@
+1- classes and classical inheritance
+2- prototypes and prototypal inheritance
+
+Classes - It provides a way to define blueprints for creating objects.
+
+prototype chaining - linking of different prototypes from child to parent.

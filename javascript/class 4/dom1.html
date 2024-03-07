@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hello-btn">Say Hello</button>
+    <button id="bye-btn">Say Bye</button>
+
+    <script>
+        //on clicking the button append hello to the page
+        //The documment method querySelector() returns the first element within
+        //the document that matches the specified selector or group of selectors. If no matches are found, null as returned 
+
+        //let btn = document.getElementById('hello') this function will select the element by id name
+        //console.log(btn)
+
+        //this function will select the element by class name
+        //let btn=document.getElementsByClassName('btn')
+
+        //queryselector
+        //it is more of a generic selector, it can search by id name ,class name, name of element also
+        //let hellobtn=document.querySelector('button')
+        
+        let hellobtn=document.getElementById('hello-btn')
+        hellobtn.addEventListener('click',function(event){
+            console.log("click happened")
+            let para = document.createElement('p')
+            console.log(para)
+            para.innerText = 'Hello'
+            let body = document.querySelector('body')
+            body.appendChild(para)
+
+        let byebtn=document.getElementById('bye-btn')
+        byebtn.addEventListener('click',function(){
+            let div = document.createElement('div')
+            div.innerText= 'Bye'
+            let body=document.querySelector('body')
+            body.appendChild(div)
+        })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+what is a promise?
+Assurance to my code that i will eventually do something which i may or may not do it.(eventual completion of a async task)
+
+why we need Async-Await?
+1- To avoid promise hell and callback hell we use Async-Await
+when we want to perform some async operations in a sync/serial fashion and chain multiple operations.

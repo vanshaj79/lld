@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+src = 'profile.png'
+instead of 
+src = './assets/profile.png'
+-->
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+    margin:0;
+    padding:5px;
+    background-color:grey;
+    } 
+    
+    .pin_container{
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-50%);
+    left:50%;
+    width:80vw;
+    background-color:black;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,250px);
+    grid-auto-rows: 10px;
+    }
+    .card{
+    margin: 10px;
+    background-color:yellow;
+    border-radius:10px;
+    }
+    .card_small{
+        grid-row-end: span 26;
+    }
+    .card_medium{
+        grid-row-end: span 35;
+    }
+    .card_large{
+        grid-row-end: span 46;
+    }
+</style>
+<body>
+	<div class="pin_container">
+        <div class="card card_small"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_large"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_small"></div>
+        <div class="card card_large"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_small"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_small"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_large"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_small"></div>
+        <div class="card card_medium"></div>
+        <div class="card card_large"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        color: orange;
+        display: inline;
+    }
+    .parent p{
+        color: purple;
+    }
+    p.inherit{
+        color: inherit;
+    }
+    p.initial{
+        color: initial;
+    }
+    p.unset{
+        color: initial;
+        /*if i give unset property to something that is inheritable 
+        then it will inherit otherwise it will set to default */
+        display: unset;
+        all: unset;/*it will select all the property which are inheritable, it will inherit it otherwise set to default*/
+    }
+    /*The revert keyword in CSS is used to reset a property to its inherited value 
+    or the value it would have if no styles were applied to it.*/
+</style>
+<body>
+    <div class="parent">
+        <p class="inherit">Inherit</p>
+        <p class="initial">Initial</p>
+        <p class="unset">Unset</p>
+        <p>No property</p>
+    </div>
+</body>
+</html>

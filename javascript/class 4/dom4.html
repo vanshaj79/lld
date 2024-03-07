@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        padding-top: 5rem;
+    }
+    .blue{
+        background-color: blue;
+        box-shadow: 0px 0px 6px 5px;
+    }
+    .green{
+        background-color: green;
+        box-shadow: 0px 0px 6px 5px;
+    }
+    .red{
+        background-color: red;
+        box-shadow: 0px 0px 6px 5px;
+    }
+    .card{
+        border: 1px solid;
+        height: 10rem;
+        width: 10rem;
+        margin: 2rem;
+    }
+</style>
+<body>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="red"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="blue"></div>
+    <div class="card" data-color="green"></div>
+    <div class="card" data-color="blue"></div>
+    <script>
+        //write a script which fetches the data-color attribute of the card on
+        //double clicking on them and attaches the fetched class to that card.
+        //also changes the data-color attribute to "used"
+        let divs = document.querySelectorAll('div') //selects all the elements passes with a condition
+        console.log(divs)
+        divs.forEach(function(div){
+            div.addEventListener('dblclick',function(event){ //listens the event happening on a certain entity
+                console.log(event)
+                let clickedDiv=event.target //target basically gives the targeted div while we were clciking on
+                let color=clickedDiv.getAttribute('data-color') //fetching attribute value by giving its name and we are calling it with clickedDiv which contains the current div
+                console.log(color)
+                clickedDiv.classList.add(color)//adding color to class
+                clickedDiv.setAttribute('data-color','used')//this fucntion will set the attribute value of element to a new value
+                //clickedDiv.removeAttribute('data-color') //used for removing a attribute from a element
+            })
+        })
+    </script>
+</body>

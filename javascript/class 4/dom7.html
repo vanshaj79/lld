@@ -1,0 +1,56 @@
+<!-- dom always start from your root element(html)
+    inside my dom events start from my root and it will find its path to the target
+    as soon as it reaches target, it travels back to root
+    1)-so the phase where the event coming from root to target is called event capture phase
+    2)-when the event reaches the target called target phase 
+    3)-when my event travels from target to root is called target bubbling phase 
+    event object:- 1)-target(event.target)
+                   2)-currentTarget(event.currentTarget)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body *{
+        margin: 10px;
+        border: 1px solid blue;
+    }
+</style>
+<body>
+    <form>FORM
+        <div>DIV
+            <p>P</p>
+        </div>
+    </form>
+
+    <script>
+        let allElemnets=document.querySelectorAll('*') //'*' it will select my all elements incluing html,body and all
+        allElemnets.forEach(element=>{
+            //this is the capture phase
+            element.addEventListener('click',event=>{//now we are adding onclick event to every element of the dom
+                console.log(`Phase: ${event.eventPhase}`)
+                console.log(`Name of the element: ${element.tagName}`)
+                console.log(`Target: ${event.target}`)
+                console.log(`Current target: ${event.currentTarget}`)
+            },true)//by default it is false,and will not capture phase 1. so to capture phase 1 we have to make it true coz by default event starts with  phase 2
+            
+            element.addEventListener('click',event=>{//now we are adding onclick event to every element of the dom
+                console.log(`Phase: ${event.eventPhase}`)
+                console.log(`Name of the element: ${element.tagName}`)
+                console.log(`Target: ${event.target}`)
+                console.log(`Current target: ${event.currentTarget}`)
+            })
+            //`
+            let para=document.querySelector('p')
+            para.addEventListener('clcik',e=>e.stopPropagation())//this function is used to stop the event to bubble up means it will not go into bubbling phase
+        })    
+              // 1 phase is capture
+              // 2 phase is target
+              // 3 phase is bubble
+    </script>
+</body>
+</html>

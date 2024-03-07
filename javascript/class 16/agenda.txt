@@ -1,0 +1,8 @@
+Applications of closure:-
+1- Currying 
+2- Partial Applications/Functions
+
+Polyphills:-
+1- Map Functions
+2- Reduce Functions
+3- Filter Functions

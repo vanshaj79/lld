@@ -1,0 +1,21 @@
+Agenda:
+
+Prerequisites:
+1. HTML/CSS
+2. javaScript fundamentals
+3. DOM
+4. Modularity - group of similar things grouped together
+5. NodeJS
+
+Advantages of Modularity:
+1. Readbility 
+2. Maintainability/Organised/loosely coupled (not dependent on each other)
+3. Reusability
+
+React uses virtual DOM, react periodically sync our Original DOM suppose 
+if we change our something using react in DOM then it will not directly 
+go and render that but instead it changes its vitrual DOM then after sometime
+it sync to or Original DOM. This makes the application faster.
+
+React maintains a particular copy of the tree which is provided by the browser is called virtual DOM.
+

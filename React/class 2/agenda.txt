@@ -1,0 +1,7 @@
+1- components 
+2- component reusability
+   2.1- JSX: js XML
+3- props and state
+4- event handling
+5- hooks
+   5.1- usestate()

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    /* this property specifies whether the flex items should wwrap or not 
+    default nowrap property will prevail */
+    justify-content: space-around;
+    padding-top: 5rem;
+    background-color: antiquewhite;
+}
+.movies{
+    height: 10rem;
+    width: 10rem;
+    margin: 2rem;
+}
+.price{
+    background-color: rgb(247, 84, 33);
+    height: 8rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.heading{
+    background-color: rgba(0,0,0,0.856);
+    height: 2rem;
+}
+.heading,
+.price{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+select,h1{
+    position: fixed;
+}
+h1{
+    text-align: center;
+    top: 0px;
+}
+select{
+    width: 8rem;
+}

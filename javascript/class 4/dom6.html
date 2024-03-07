@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="all">Remove All</button>
+    <ul>
+        <li>
+            <p>Task-1</p>
+            <button class="delete-btn">delete</button>
+        </li>
+        <li>
+            <p>Task-2</p>
+            <button class="delete-btn">delete</button>
+        </li>
+        <li>
+            <p>Task-3</p>
+            <button class="delete-btn">delete</button>
+        </li>
+        <li>
+            <p>Task-4</p>
+            <button class="delete-btn">delete</button>
+        </li>
+    </ul>
+    <script>
+        //Q- Make remove all button work and make individual delete button workelete button work
+
+        let removeAllBtn=document.getElementById('all')
+        let deleteBtns=document.querySelectorAll('.delete-btn')
+        let ul=document.querySelector('ul')
+
+        deleteBtns.forEach(deleteBtn=>{
+            deleteBtn.addEventListener('click',function(event){
+                ul.removeChild(deleteBtn.parentElement)//removes the child element from dom
+            })
+        })
+        // for(let i=0;i<deleteBtns.length;i++){
+        //     let deleteBtn=deleteBtns[i]
+        //     deleteBtn.addEventListener('click',function(event){
+        //         let li=deleteBtn.parentElement
+        //         ul.removeChild(li)
+        //     })
+        // }
+        removeAllBtn.addEventListener('click',event=>{
+            ul.remove()//removes that particular element completely from the dom
+        })   
+    </script>
+    
+</body>
+</html>

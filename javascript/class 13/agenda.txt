@@ -1,0 +1,8 @@
+Promise:
+A promise is an object representing the eventual completion or failure of an Async task.
+
+State of promise:
+1- Pending state: made a promise (the result is undefined)
+2- Resolved state: fulfil your promise (the result is value)
+3- Rejected state: cannot fulfil promise (the result is an error)
+4- Settled state: promise is executed

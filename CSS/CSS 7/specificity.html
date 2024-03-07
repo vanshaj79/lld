@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul#fruits li{
+        color: yellow !important;
+    }
+    /* if we use !important then it will be the most important property and applied to all */
+    ul#fruits li.fav{
+        color: red;
+    }
+</style>
+<body>
+    <!--pin pointing the exact element that needs to be pinned called specificity-->
+    <!--   specificity-- 
+     [box1]         [box2]         [box3]
+    no.of id      no.of class   no.of elements 
+    compare from left to right -->
+    <ul id="fruits">
+        <li>apple</li>
+        <li class="fav">mango</li>
+        <li>banana</li>
+        <li>grapes</li>
+    </ul>
+</body>
+</html>

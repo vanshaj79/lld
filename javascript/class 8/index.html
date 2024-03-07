@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 200px;
+        width: 200px;
+        background-color: tomato;
+    }
+</style>
+<body>
+    <div>
+        I am the div
+    </div>
+    <script>
+        const startAnimation = ()=>{
+            let div = document.querySelector('div')
+            div.style.width = '400px'
+        }
+        const startAnimation2 = ()=>{
+            let div = document.querySelector('div')
+            div.style.height = '400px'
+        }
+    
+        let startAnimationId = setTimeout(startAnimation,5000)
+        let startAnimationId2 = setTimeout(startAnimation2,3000)
+        //we can have multiple timers with same function
+        
+        let startAnimationId3 = setTimeout(startAnimation,5000)
+        
+        console.log(startAnimationId)
+        console.log(startAnimationId2) 
+        console.log(startAnimationId3)
+        //clearTimeout(startAnimationId)//deletes the timeout function with id store in startAnimationId
+        //clearTimeout(startAnimationId2)//deletes the timeout function with id store in startAnimationId2
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+/* when we give box-sizing as "content-box" then the padding, border, margin 
+are applied to outside the container which can cause the disturbance to other elements arrangement also
+(margin(border(padding(conatiner)padding)border)margin)
+By default box-sizing is conent box*/
+
+/* when we give box-sizing as "border-box" then the padding comes inside the container, 
+border comes outside the container and margin also comes outside the container
+(margin(border(padding container padding)border)margin)*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.toolbox-cont{
+    height: 5rem;
+    background-color: #4b4b4b;
+    display: flex; /*we use flex bcz we want both the container should come in one line*/
+    align-items: center; /*this will align the items inside to center vertically and these property are given at parent level*/
+}
+.toolbox-cont > * {/*child selector -> selects all the direct child of the class toolbox-content*/
+    margin-left: 4rem;
+}
+.toolbox-priority-cont{
+    height: 3.5rem;
+    width: 20rem;
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.color{
+    height: 1.5rem;
+    width: 3rem;
+}
+.color:hover{
+    background-color: #485460;
+}
+.lightpink{
+    background-color: lightpink;
+}
+.lightgreen{
+    background-color: lightgreen;
+}
+.lightblue{
+    background-color: lightblue;
+}
+.black{
+    background-color: black;
+}
+.action-btn-cont{
+    height: 3.5rem;
+    width: 8rem;
+    background-color: #3d3d3d;
+    display: flex;
+}
+.action-btn-cont > * {
+    display: flex;
+    width: 50%;
+    color: white;
+    font-size: 2rem;
+    justify-content: center;/*horizontally fixes content*/
+    align-items: center;/*vertically fixes items*/
+}
+.action-btn-cont > *:hover{
+    background-color: #4BB543;
+}
+/* if we give position as absolute 
+then the element get detached from your base HTML 
+means it can float over rest of the element in the page */
+.modal-cont{
+    height: 50vh;
+    width: 50vw;
+    background-color: lightsalmon;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    display: none;
+}
+.textArea-cont{
+    height: 100%;
+    width: 76%;
+    resize: none; /*this property will not allow user to resize the textarea */
+    outline: none;/*will not show any outline on the textarea*/
+    border: none;
+    background-color:#dfe4ea ;
+    font-size: 2rem;
+}
+.priority-colors-cont{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(78, 73, 73);
+}
+/* .priority-colors-cont > *:hover{ 
+    background-color: #485460;
+} */
+.priority-color{
+    height: 4rem;
+    width: 6rem;
+}
+.ticket-cont{
+    height: 12rem;
+    width: 15rem;
+    background-color: coral;
+}
+.ticket-color{
+    height: 1rem;  
+}
+.ticket-id{
+    height: 2rem;
+    background-color: yellow;
+}
+.main-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+.task-area{
+    height: 7rem;
+    width: 15rem;
+    resize: none;
+    outline: none;
+    /* overflow-y: scroll; */
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.ticket-lock{
+   display: flex;
+   justify-content:end;
+   /* margin-top: 40px; */
+   margin-right: 8px;
+}
+.active{
+    border: 5px solid red;
+}

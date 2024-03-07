@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*CSS Selectors*/
+    /*multiple class on same elements*/
+    .m1.m2{
+        background-color: blue;
+    }
+    .a1>.a2{
+        background-color: blue;
+    }
+</style>
+<body>
+    <div class="m1 m2">Select Me</div>
+
+    <div class="m1">not Me</div>
+    <div class="m2">not me either</div>
+
+    <div class="a1"><p class="a2">Not me</p></div> 
+</body>
+</html>

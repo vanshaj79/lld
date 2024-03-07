@@ -1,0 +1,11 @@
+Agenda 
+1- "this" keyword
+2- constructor function
+3- classes & classical inheritance
+4- Prototypes & prototypal inheritance
+5- Call, Apply & Bind method
+6- Memory of objects(Reference datatypes)
+
+This keyword
+"This" keyword refers to a certain object and this reference can change based on how and where we are using "this" keyword.
+

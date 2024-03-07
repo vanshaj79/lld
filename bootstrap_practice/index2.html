@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .custom{
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <div class="m-3">
+        <h2 class="text-primary-emphasis">Employee Master</h2>
+        <form>
+            <!-- Employee master section -->
+            <div>
+                <div class="d-flex gap-4 flex-wrap">
+                    <div>
+                        <label>Employee Code<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Password Reset Policy<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Employee Type<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Employee Name<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Email ID<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Date Of Birth(Records)<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Date Of Birth(Actual)</label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Father's Name<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Mother's Name</label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Marital Status<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Highest Qualification<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Blood Group<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Address<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Emergency Contact<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Gender<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+            </div>
+
+            <!-- appointment details section -->
+            <div>
+                <h2 class="mt-4">Appointment Details<p class="text-danger d-inline">*</p></h2>
+                <div class="d-flex gap-4 flex-wrap">
+                    <div>
+                        <label>Date of Joining<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Department<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Designation<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                    <div>
+                        <label>Grade<p class="text-danger d-inline">*</p></label>
+                        <div><input type="text" class="border rounded custom"/></div>
+                    </div>
+                </div>
+            <div class="gap-4 mt-4">
+                <div>
+                    <label>Unit<p class="text-danger d-inline">*</p></label>
+                    <div class="d-flex flex-wrap align-items-center gap-4">
+                        <div><input type="text" class="border rounded custom"/></div>
+                        <div class="d-flex gap-2"><input type="checkbox"/><label>Employee Left</label></div>
+                    </div>
+                </div>     
+            </div>
+            </div>
+            
+            <!-- toggle section  -->
+           <div class="form-check form-switch mt-4">
+                <input
+                    class="form-check-input"
+                    type="checkbox"/>
+                <label class="form-check-label" for="flexSwitchCheckDefault">Active</label>
+           </div>
+           
+           <!-- button section -->
+           <div class="mt-4 d-flex w-25 gap-3">
+                <div><button type="submit" class="rounded btn btn-success px-4" >Save</button></div>
+                <div><button type="submit" class="rounded btn btn-warning px-4">Export</button></div>
+                <div><button type="clear" class="rounded btn btn-danger px-4">Reset</button></div>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

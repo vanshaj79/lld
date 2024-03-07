@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{    /*universal selector*/
+        margin:0;
+    }
+    .good{
+        box-sizing: border-box;
+        background-color: red;
+        border: 10px solid black;/*fencing*/
+        padding:10px; /*space between houses*/
+        margin:10px 20px;/*roads (top-bottom,left-right)*/
+        /*single value-> 10px (top,bottom,left,right)*/
+        /*double value-> 10px 20px(top&&bottom,left&&right)*/
+        /*three value-> 10px 20px 30px(top,left&&right,bottom)*/
+        border-radius: 10px;
+        width:400px;
+    }
+    .bad{
+        /* box-sizing:content-box; */
+        background-color: red;
+        border: 10px solid black;/*fencing*/
+        padding:10px; /*space between houses*/
+        margin:10px 20px;/*roads */
+        width: 400px;
+        
+    }
+</style>
+<body>
+    <div class="good">
+        <h1>Saideep's House</h1>
+    </div>
+    <div class="good">
+        <h1>Sanchit's House</h1>
+    </div>
+    <div class="bad">
+        <h1>NOt Sanchit's House</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+1- Scope: It's a boundary inside which a variable is accessible.
+2- Lexical Scope: Every nested function will have access to its parent's variables 
+                  and they will be able to work with them and the scope that is formed is called lexical scope.
+3- Scope Chaining:
+4- Closure: It is nothing but a function that is binded with its lexical scope.
+5- Execution context

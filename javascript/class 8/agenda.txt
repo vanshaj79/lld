@@ -1,0 +1,2 @@
+SetTimeout()=>if you want to perform some action after some delay.
+SetTimeout(func to be executed_,_delay in miliseconds,arg1,arg2)

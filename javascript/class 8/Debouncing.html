@@ -1,0 +1,89 @@
+<!--Debouncing is a way to control the rate at which a function is executed 
+using debouncing, a function is executed after certain period of inactivity.
+It improves performance of your app-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="normal" placeholder="normal">
+    <input type="text" class="debouncing" placeholder="debouncing">
+    <input type="text" class="throttling" placeholder="throttling">
+</body>
+<script>
+    let inputFieldNormal = document.querySelector('.normal')
+    let inputFieldDebouncing = document.querySelector('.debouncing')
+    let inputFieldThrottling = document.querySelector('.throttling')
+
+
+    function getItemsRecommendationNormal(){
+        let searchText = inputFieldNormal.value
+        console.log(`GET items for ${searchText}`)
+    }
+
+    function getItemsRecommendationDebouncing(){
+        let searchText = inputFieldDebouncing.value
+        console.log(`Debounce ::GET items for ${searchText}`)
+    }
+    
+    function getItemsRecommendationThrottling(){
+        let searchText = inputFieldThrottling.value
+        console.log(`Throttle ::GET items for ${searchText}`)
+    }
+
+
+    //Debouncing - depends on user input, dynamic interval
+    function debounce(func, delay){
+        let timerId
+
+        const debouncedSearch = () =>{
+            //Implementing debouncing
+            clearTimeout(timerId)
+
+            timerId = setTimeout(function() {
+                func()
+            }, delay)
+        }
+        return debouncedSearch
+    }
+
+    //Throttling - it occurs everytime after a specific time,
+    // it doesnot depend on input of user
+    function throttle(func,delay){ //means it will execute after every 3secs automatically
+        let flag = true
+        
+        const throttledSearch = () =>{
+            if(flag){
+                func()
+                flag = false
+                setTimeout(function() {
+                    flag = true 
+                }, delay)
+            }
+        }
+    }
+
+    let autocompleteNormal = getItemsRecommendationNormal
+    let autocompleteDebouncing = debounce(getItemsRecommendationDebouncing, 3000)
+    let autocompleteThrottling = debounce(getItemsRecommendationThrottling, 3000)
+
+    inputFieldNormal.addEventListener('keyup',autocompleteNormal)
+    inputFieldDebouncing.addEventListener('keyup',autocompleteDebouncing)
+    inputFieldThrottling.addEventListener('keyup',autocompleteThrottling)
+
+    // conventional way - whenever there is a script tag your HTMl parsing will block, it will first download your JS and executed your JS ,
+    // once downloading and executing of js is done then it will continue your HTML parsing. overall laod time increases.
+    
+    // async - if we mention async in script tag, your HTML is rendering as soon as the script tag with async is encountered, the downloading has started in parallel with html rendering 
+    // as soon as the downloading done it will start executing it (execution and rendering can't go parallel so rendering stops during execution)
+    // once execution done, html parsing started again.
+    // overall loading time slightly reduced
+
+    // defer - if we mention defer in script tag, html parsing going on as soon as you encountered the script tag with defer, it will start downloading in parallel and 
+    // it will first complete the html parsing then after it will execute.
+    // overall loading time get reduces (most efficient way bcz html parsing is much fast as compare to async)
+</script>
+</html>

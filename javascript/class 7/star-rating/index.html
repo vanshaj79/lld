@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container"> 
+        <h1>Star Component</h1>
+        <div class="star-container">
+            <!-- data-index is a custom attribute.
+            They allow us to add our own information to HTML tags.
+            These are not specific and can be used with all the HTML elements. -->
+            <span class="star" data-index="1" data-name="vanshaj">&#9733</span>
+            <span class="star" data-index="2">&#9733</span>
+            <span class="star" data-index="3">&#9733</span>
+            <span class="star" data-index="4">&#9733</span>
+            <span class="star" data-index="5">&#9733</span>
+        </div>
+        <h2>Rating count: <span id="star-rating">0</span></h2>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

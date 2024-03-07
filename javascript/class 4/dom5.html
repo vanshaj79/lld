@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        /* this property specifies whether the flex items should wwrap or not 
+        default nowrap property will prevail */
+        justify-content: space-around;
+        padding-top: 5rem;
+        background-color: antiquewhite;
+    }
+    .movies{
+        height: 10rem;
+        width: 10rem;
+        margin: 2rem;
+    }
+    .price{
+        background-color: rgb(247, 84, 33);
+        height: 8rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    .heading{
+        background-color: rgba(0,0,0,0.856);
+        height: 2rem;
+    }
+    .heading,
+    .price{
+        color: white;
+        text-align: center;
+        margin: 0;
+    }
+    select,h1{
+        position: fixed;
+    }
+    h1{
+        text-align: center;
+        top: 0px;
+    }
+    select{
+        width: 8rem;
+    }
+</style>    
+<body>
+    <h1>BOOK MY SHOW</h1>
+    <select>
+        <option value="none">None</option>
+        <option value="action">Action</option>
+        <option value="romance">Romance</option>
+        <option value="comedy">Comey</option>
+    </select>  
+    
+    <div class="movies">
+        <h3 class="heading">Action Movie-1</h3>
+        <p class="price" data-category="action">Rs. 100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Action Movie-2</h3>
+        <p class="price"  data-category="action">Rs. 200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Action Movie-3</h3>
+        <p class="price"  data-category="action">Rs. 150</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Romance-1</h3>
+        <p class="price"  data-category="romance">Rs. 200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Romance-2</h3>
+        <p class="price" data-category="romance">Rs. 150</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Romance-3</h3>
+        <p class="price" data-category="romance">Rs. 150</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Action Movie-4</h3>
+        <p class="price" data-category="action">Rs. 200</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Comedy-1</h3>
+        <p class="price" data-category="comedy">Rs. 100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Romance-4</h3>
+        <p class="price" data-category="romance">Rs. 100</p>
+    </div>
+    <div class="movies">
+        <h3 class="heading">Comedy-2</h3>
+        <p class="price" data-category="comedy">Rs. 200</p>
+    </div>
+    <script>
+        // Q1)- Make the filter work
+        //in this we are going to play with DOM
+        //first we will select the element by which we can interact
+
+
+        let selectTag=document.querySelector('select')//selecting element from html file
+        //here we have event name as 'change' bcz it is associated with select tag
+        selectTag.addEventListener('change',function(event){ //listening event of the element
+            let filterValue=selectTag.value; //value property gives the current value in that tag
+            console.log(filterValue)
+
+            //if 'none' is selected -> display all the divs
+            //else -> display only those divs with matching genre
+            let tickets=document.querySelectorAll('.price')//selects all element which have class = price
+            if(filterValue==='none'){
+            //=== operator checks the type of value and value aslo
+            tickets.forEach(ticket =>{
+                ticket.parentElement.style.display='block'
+            })
+            }else{
+                //need to loop over the tickets then only i can filter out display the desired ones
+                tickets.forEach(function(ticket){
+                    let ticketCategory=ticket.getAttribute("data-category")//returns the value of an element's atribute
+                    if(filterValue === ticketCategory){
+                        //show the div
+                        ticket.parentElement.style.display='block'
+                    }else{
+                        //hide the div
+                        //we can also apply CSS to our hTml element using DOM (.style property)
+                        ticket.parentElement.style.display='none'
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>

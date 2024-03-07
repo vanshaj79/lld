@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let foodItems=`[
+        {
+            "name": "pav bhaji",
+            "price":100,
+            "isAvailable":true
+        },
+        {
+            "name": "ice cream",
+            "price":100,
+            "isAvailable":true
+        }
+    ]`
+    let foodItemsJSON = JSON.parse(foodItems)//parse funciton will parse the string and convert it into JSON 
+    console.log(foodItems)
+    console.log(foodItemsJSON)
+    </script>
+</body>
+</html>

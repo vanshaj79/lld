@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .parent{
+        width: 70vw;
+        margin: auto;
+        background-color: tomato;
+        padding: 10px;   
+
+        display: grid;
+        /* grid-template-columns:100px 100px 100px; another way and fixed */
+        /* grid-template-columns: 1fr 1fr 1fr; another way and used for dynamic sizing and responsive*/
+        grid-template-columns: repeat(3,1fr);/*no. of frames=3 and size=1fr*/
+        column-gap: 10px;/*adds gap between your column*/
+        row-gap: 10px;/*adds gap betweeen your rows*/
+        gap: 5px 5px;/*in one line you can give row as well as column gap*/
+        grid-template-rows: 1fr 2fr 1fr 2fr;/*using which we can define height of rows or cells*/
+        grid-auto-rows: 100px;/*for specially large texts which cant be fit in a cell so to control the height of cell*/
+    }
+    .child{
+        background-color: lightcoral;
+        border: 1px solid black;
+    }
+    #merge-me{
+        grid-row: span 2;/*to merge the cells*/
+    }
+    @media(max-width:800px){/*media query*/
+        .parent{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media(min-width:1200px){
+        .parent{
+            grid-template-columns: 1fr 1fr;
+            /* justify-self:center; algin the cell to center horizontally*/
+            /* align-self:center; align the cell to center vertically*/
+        }
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child" id="merge-me">child 1</div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child">child 4</div>
+        <div class="child">child 5</div>
+        <div class="child">child 6</div>
+        <div class="child">child 7</div>
+        <div class="child">child 8</div>
+        <div class="child">child 9</div>
+    </div>
+</body>
+</html>

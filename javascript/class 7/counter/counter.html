@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p id="counter">0</p>
+    <div>
+        Increment/Decrement by 
+        <input type="number" value="1" min="1" id="incrementBy">
+    </div>
+    <div>
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+    </div>
+    <button id="reset">RESET</button>
+</body>
+<script>
+    let counter = document.querySelector('#counter')
+
+    let incrementBtn = document.querySelector('#increment')
+    let decrementBtn = document.querySelector('#decrement')
+    let resetBtn = document.querySelector('#reset')
+    
+    let incrementBy = document.querySelector('#incrementBy')
+
+    incrementBtn.addEventListener('click',event =>{
+        let currentValue = parseInt(counter.innerText)
+        let incrementNumber = parseInt(incrementBy.value)
+
+        counter.innerText = currentValue + incrementNumber
+    })
+    decrementBtn.addEventListener('click',event => {
+        let currentValue = parseInt(counter.innerText)
+        let incrementNumber = parseInt(incrementBy.value)
+        
+        if(currentValue > 0){
+            counter.innerText = currentValue - incrementNumber
+        }
+    })
+    resetBtn.addEventListener('click',event => {
+        counter.innerText = 0
+        incrementBy.value = 1
+    })
+</script>
+</html>

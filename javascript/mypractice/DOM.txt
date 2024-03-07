@@ -1,0 +1,2 @@
+The document object represents your web page
+if we want to access any element in an HTML page,we always start with accessing the document object.

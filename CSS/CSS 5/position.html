@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .parent{
+        background-color: tomato;
+        width: 50vw;/*vw means viewport's width here it is taking 50% of viewport width*/
+        height: 1000px;   
+        position: relative;
+    }
+    .child{
+        background-color: lightblue;
+        width:30vw;
+        margin: 10px;
+        border:1px solid black;
+    }
+    /*#special{
+        position: relative; in this elements are adjusted from its position. 
+        top:10px;
+        left: 100px;
+    }
+    #special{
+        position: absolute;  positions element relative to the nearest positioned ancestor
+        right:50px;
+        bottom: 50px;
+    }*/
+    #special{
+        position: fixed; 
+        /* element positioned relative tot the viweport, does not move on scroll */
+        bottom: 20px;
+        right: 10px;
+    }
+    #sp{
+        position: sticky;
+        top: 0px;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child">child 1</div>
+        <div class="child" id="special">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child" id="sp">child 4</div>
+    </div>
+</body>
+</html>

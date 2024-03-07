@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h3><u>changing the tables font color</u></h3>
+    <h5>Click on a text in a cell for changing its color to blue</h5>
+    <table id="mynewtable">
+        <tr>
+            <h3>
+                <td style="color:red">red</td>
+                <td style="color:yellow">yellow</td>
+                <td style="color: green;">green</td>
+            </h3>
+        </tr>
+        <tr>
+            <h3>
+                <td style="color:red">red</td>
+                <td style="color:yellow">yellow</td>
+                <td style="color: green;">green</td>
+            </h3>
+        </tr>
+    </table>
+</body>
+<script>
+    let table = document.querySelector('#mynewtable')
+    table.addEventListener('click',event => {
+        //console.log(event.target)
+        event.target.style.color = 'blue'
+    })
+    table.addEventListener('dblclick',event => {
+        event.target.style.color = event.target.innerText
+    })
+</script>
+</html>

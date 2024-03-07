@@ -1,0 +1,34 @@
+1- Oops pillars
+    polymorphism
+    encapsulation
+    abstraction
+
+2- call,bind,apply
+3- memory of object
+   primitive & reference datatypes
+   shallow copy & deep copy
+
+CALL
+The call method in javascript allows you to invoke a function on an object while providing a specific context(this value) 
+for that function to use, along with optional arguments that the function can accept.
+This enables dynamic context binding and the passing of specific values directly to the function being called.
+
+APPLY 
+Apply and call method are almost same. The only difference is, when we are using apply method, we need to pass an array as the argument.
+
+BIND 
+The bind method in JavaScript creates a new function that, when invoked, has a specific this value set to a provided value.
+It is useful for "binding" a function to a particular object as its context. The new function produced by bind can also have preset arguments if provided.
+
+SHALLOW COPY 
+A shallow copy creates a new object or array, but the contents within it remain references to the original data.
+it copies the top-level structure without recursively copying nested objects or arrays.
+
+ABSTRACTION 
+Abstraction means hiding certain details that don't matter to the user and only showing essential features or functions.
+
+ENCAPSULATION 
+Encapsulation means keeping properties and methods private inside a class, so that they are not accessible from outside that class.
+
+POLYMORPHISM 
+Polymorphism means having different and many forms. we can overwrite a method inherited from a parent class.

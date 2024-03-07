@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*CSS SELECTOR*/
+    /*Children Selector (direct child)*/
+    div > span{
+        background-color: red;
+    }
+    div > span > p{
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <div>
+        <span>I'm a direct child</span>
+        <div>
+            <span>I'm a direct and Descendent child</span>
+        </div>
+        <p>
+            <span>I'm not a direct child</span>
+        </p>
+    </div>
+    <div>
+        <span><p>I'm a direct child</p></span>
+       
+    </div>
+</body>
+</html>
